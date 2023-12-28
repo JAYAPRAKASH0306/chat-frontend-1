@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
 
+
 export default function Login() {
   const navigate = useNavigate();
   const [values, setValues] = useState({ username: "", password: "" });
@@ -84,11 +85,18 @@ export default function Login() {
           />
           <button type="submit">Log In</button>
           <span>
+          <div >
+          <h5>Default Login Credentials</h5><br/>
+        <h6>MailId:newuser@gmail.com</h6><br/>
+        <h6>Password:newuser@123</h6><br/>
+          </div>
+
             Don't have an account ? <Link to="/register">Create One.</Link>
           </span>
         </form>
       </FormContainer>
       <ToastContainer />
+
     </>
   );
 }
